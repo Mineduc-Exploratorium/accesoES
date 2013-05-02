@@ -95,13 +95,13 @@ define([
 				.nodes(this.data);
 
 			this.groups = [
-				{titulo: "Año de egreso", nodes : nodesEgreso },
-				{titulo: "Dependencia", nodes : nodesDependencia },
-				{titulo: "PSU", nodes : nodesPSU },
-				{titulo: "NEM", nodes : nodesNEM },
-				{titulo: "Tipo IE", nodes : nodesTipoIE },
-				{titulo: "Ranking 10%", nodes : nodesRanking10 },
-				{titulo: "Ranking 7.5%", nodes : nodesRanking75 },
+				{titulo: "Año de egreso de Ed. Media", nodes : nodesEgreso },
+				{titulo: "Dependencia del establecimiento de egreso", nodes : nodesDependencia },
+				{titulo: "Puntaje PSU (promedio Lenguaje/Matemática)", nodes : nodesPSU },
+				{titulo: "Nota Educación Media", nodes : nodesNEM },
+				{titulo: "Tipo de Institución Superior en que se matricula", nodes : nodesTipoIE },
+				{titulo: "Pertenece al 10% de mejores egresados", nodes : nodesRanking10 },
+				{titulo: "Pertenece al 7.5% de mejores egresados", nodes : nodesRanking75 },
 				{titulo: "Quintil Socioeconómico", nodes : nodesQuintil }
 			];
 
