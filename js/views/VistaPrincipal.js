@@ -5,10 +5,9 @@ define([
 	'jquery',
 	'd3',
 	'VistaLoading',
-	'VistaToolTip',
 	'views/Visualizador',
 
-	], function(_, Backbone,$, d3, VistaLoading, VistaToolTip, Visualizador){
+	], function(_, Backbone,$, d3, VistaLoading, Visualizador){
 
 
 	var VistaPrincipal = Backbone.View.extend(
@@ -49,8 +48,6 @@ define([
 		* Despliegue inicial de elementos gráficos.
 		*/
 		render : function() {	
-			// Vista con tooltip para mostrar ficha de establecimiento
-			this.tooltip = new VistaToolTip();
 
 			// Selector (d3) al elemento del DOM que contiene la visualización principal
 			var visContainer;
@@ -68,7 +65,6 @@ define([
 			this.visualizador = new Visualizador({
 				el: visContainerElement,
 				data: this.data,
-				tooltip : this.tooltip
 			});
 
 

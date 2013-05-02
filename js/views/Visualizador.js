@@ -4,10 +4,10 @@ define([
 	'backbone',
 	'jquery',
 	'd3',
-	'VistaToolTip',
+	'VistaTooltip',
 	'VistaEjesXY',
 	'views/BarLayout'
-	], function(_, Backbone,$, d3, VistaToolTip, VistaEjesXY, BarLayout){
+	], function(_, Backbone,$, d3, VistaTooltip, VistaEjesXY, BarLayout){
 
 	var Visualizador = Backbone.View.extend(
 		/** @lends Visualizador.prototype */
@@ -28,7 +28,7 @@ define([
 		initialize: function() {
 			//this.svg = this.options && this.options.svg ? this.options.svg : document.createElementNS('http://www.w3.org/2000/svg', "g");
 			this.data = this.options && this.options.data ? this.options.data : [];
-			this.tooltip = this.options && this.options.tooltip ? this.options.tooltip : new VistaToolTip();
+			this.tooltip = this.options && this.options.tooltip ? this.options.tooltip : new VistaTooltip();
 
 			// Binding de this (esta vista) al contexto de las funciones indicadas
 			_.bindAll(this,"render", "tootipMessage")
@@ -43,6 +43,7 @@ define([
 
 	   		this.color = d3.scale.category20c();
 
+			this.tooltip = new VistaTooltip();
 	  		// Reescribe función generadora del mensaje en tooltip
 			this.tooltip.message = this.tootipMessage;
 
